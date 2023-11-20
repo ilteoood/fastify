@@ -13,7 +13,8 @@
     "coverage": "npm run unit -- --coverage-report=html",
     "coverage:ci": "c8 --reporter=lcov tap --coverage-report=html --no-browser --no-check-coverage",
     "coverage:ci-check-coverage": "c8 check-coverage --branches 100 --functions 100 --lines 100 --statements 100",
-    "lint": "npm run lint:standard && npm run lint:typescript && npm run lint:markdown",
+    "lint": "npm run lint:standard && npm run lint:typescript",
+    "lint:biome": "biome lint .",
     "lint:fix": "standard --fix && npm run lint:typescript:fix",
     "lint:markdown": "markdownlint-cli2",
     "lint:standard": "standard | snazzy",
@@ -188,6 +189,7 @@
     "yup": "^1.3.2"
   },
   "dependencies": {
+    "@biomejs/biome": "^1.3.3",
     "@fastify/ajv-compiler": "^3.5.0",
     "@fastify/error": "^3.4.0",
     "@fastify/fast-json-stringify-compiler": "^4.3.0",
